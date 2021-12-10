@@ -57,18 +57,26 @@ public class ReturnTypes : MonoBehaviour
     private int minLevel = 0; // Just declaring the minimum level so the player cant go in minus. Yes technically we could just write 0
     /* But when writing code its usually better to have a variable tied to the number for various of reasons */
     /* Scaleability to mention 1 reason, values can always be changed and edited. This gives flexibility to create new modes or test new values*/
+    private int cLevel = 0;
+    private int pLevel = 0;
 
     // Start is called before the first frame update
     void Update()
     {
-        Debug.Log(UpdateString(playerInformation));
+        /* Naturally you want to avoid casting things like this every frame in update however, since im just trying to quickly display what this script does
+           and how we can use differnt methods to our advantage */
+           UpdateString(playerInformation);
 
+        /* This is essentially just a temporary fix as this level system might be something you'd want to keep on for the entire game. Here i just turn off the script
+            limiting the use of Update(). Do note there are many ways to avoid update or clear update but this is an example of 1 at least */
         if(UpdateParagonLevel == maxParagon)
         {
-            GetComponent<ReturnTypes>().enabled = false;
+            this.enabled = false;
         }
+
     }
 
+    /* Here we say that this method will return a string value */
     private string UpdateString(string value)
     {
 
@@ -79,7 +87,20 @@ public class ReturnTypes : MonoBehaviour
         }
         else
         {
+            exp = maxLevel * requiredExpForLevel;
             value = playerIntroduction + playerName + playerLevel + Mathf.Clamp(UpdateCurrentLevel, minLevel, maxLevel) + StringForParagon + Mathf.Clamp(UpdateParagonLevel, minLevel, maxParagon);
+       }
+
+        if(cLevel != UpdateCurrentLevel)
+        {
+            Debug.Log(value);
+            cLevel = UpdateCurrentLevel;
+        }
+
+        else if (pLevel != UpdateParagonLevel)
+        {
+            Debug.Log(value);
+            pLevel = UpdateParagonLevel;
         }
 
         return value;
