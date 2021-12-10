@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf7219bab7fe46a1ad266029b2fee19, type: 3}
+  m_Name: STARTHERE
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 34c54d57b8ca82a41a58bace8d825c1a, type: 3}
+  title: Welcome To The Technical Pratice Field Created By Christian Kollbaer - NUC
+    Academic Helpdesk
+  sections:
+  - heading: -----------------------------------------------------
+    text: 
+    linkText: 
+    url: 
+  - heading: 
+    text: Setting Up A Script Editor & Assigning It As Default
+    linkText: 
+    url: 
+  - heading: 
+    text: How To Create Scripts
+    linkText: 
+    url: 
+  - heading: 
+    text: How to apply scripts to objects
+    linkText: 
+    url: 
+  - heading: -----------------------------------------------------
+    text: 
+    linkText: 
+    url: 
+  loadedLayout: 1

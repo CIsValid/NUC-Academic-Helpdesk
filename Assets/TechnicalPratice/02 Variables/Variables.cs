@@ -45,18 +45,26 @@ public class Variables : MonoBehaviour
 
     */
 
-    /* Now if any of these above here confuses you dont fear cause ill be explaing the use case and what we are refering to shortly */
+    /* Now if any of this above here confuses you dont fear cause ill be explaing the use case and what we are refering to shortly */
 
-    /* For any future variable mentions I will also make sure to Declare the value as it prevents NULL Reference errors / other mistakes more on this later.
+    /* For any future variable mentions I will also make sure to Declare the value as it prevents NULL Reference errors / other mistakes, more on this later.
     Its also wise to do this from the start since you'll get used to it, which will be making it easier to jump to other languages that needs it. Eherm.. Looking at you C++ >:( */ 
-
-    /* Floats are decimal numbers */
 
     public float AttackSpeed = 2.2f; // We will now call this in the Start function once to see the output. Proceed to press play :)
 
 
     /* Now its time to cover some of the Variables and what they are used for! */
 
+       /* GameOject Refers to Objects which have been placed in the scene or in general assets since they can be spawned through scripts as well */
+       /* Floats are decimal numbers */
+       /* Ints are whole numbers */
+       /* Strings = Text values, now do be careful of excessive use of strings cause they are very heavy performance wise */
+       /* boolean also refered to as Bool = 0 or 1 essentially true or false which is how we will be using it */
+       /* Vector2 is a place in 2d space meaning (0x, 0y) Very commonly used for Shader math or in some cases position handling / input handling */
+       /* Vector3 is a place in 3d space meaning (0x, 0y, 0z). Often used to control the position of objects */
+       /* Quaternion = rotations (0x,0y,0z) */
+
+    //NOTE: There are of course more variables however these are the
 
     /* Now it's time for a couple of small assignments!     */
 
@@ -68,20 +76,21 @@ public class Variables : MonoBehaviour
 
     /* End of assignment A */
 
-    /*B. */
-    /* Start of assignment B Enter Your Answer Bellow */
+    /*B.  Now as you can see we can also write text in the script, but in order for the editor to igore whats being written we need to start with either // 
+    or we cover the text like so /* Your text here */
 
-
+    /* Your task is to now comment the variable you just made with both // and /* */
+    // This is just to make you used to comment your code. Try to make it short and concise.
 
     /* End of assignment B */
 
+
+
+
+
     /*C. Scroll down until you see "private void UserVariableTest()" */
 
-    /* Now as you can see we can also write text in the script,
-    but in order for the editor to igore whats being written we need to start with either // or we cover the text like so /* Your text here */
 
-
-    // Start is called before the first frame update
     void Start()
     {
         VariableShowcase();
@@ -97,10 +106,12 @@ public class Variables : MonoBehaviour
     private void UserVariableTest()
     {
 
-    /* C. You should now already have created a variable, use the above function as a hint as to how to display your variable*/
+    /* C. You should now already have created a variable, use the above function as a hint as to how to display your variable in the console.
+          You will see at the bottom left of your screen the console will output your variable if you've done it correctly */
+
     /*Start of assignment C Enter Your Answer Bellow */
 
-
+    
 
     /* End of assignment C */
 
