@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class SmallHouse : House
 {
-
-    [Space]
-    [Header("Checks")]
+    [Space(5)]
+    [Header("Min & Max House Size")]
     [SerializeField]
-    private bool randStartSize = false;
+    [Range(-10, 10)]
+    private float minS = -10;
+    [SerializeField]
+    [Range(-10, 10)]
+    private float maxS = 10;
 
     public override void Start()
     {
@@ -17,7 +20,7 @@ public class SmallHouse : House
 
         if(randStartSize)
         {
-            RandomSpawnSize(new Vector3(Random.Range(1, 2),Random.Range(1, 4), Random.Range(1, 2)));
+            RandomSpawnSize(new Vector3(), Random.Range(1, 2),Random.Range(1, 6), Random.Range(1, 2));
 
             houseX = rndSizeCached.x;
             houseY = rndSizeCached.y;
@@ -28,7 +31,7 @@ public class SmallHouse : House
 
     public override void Update()
     {
-        SetHouseSize(new Vector3(houseX,houseY,houseZ));
+        SetHouseSize(ClampSize(new Vector3(), minS, maxS));
     }
 
 }
