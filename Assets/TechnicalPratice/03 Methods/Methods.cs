@@ -29,7 +29,7 @@ public class Methods : MonoBehaviour
     }
 
     /* Often overlooked yet extremely helpful is the OnEnable & OnDisable these will be called *EVERYTIME* the script is enabled or disabled */
-    /* Unlike update which is just once on game start */
+    /* Unlike start which is just once on game starts */
     void OnEnable()
     {
 
