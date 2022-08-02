@@ -16,15 +16,15 @@ public class CodeReadability : MonoBehaviour
 
     [Header("Player Introduction")] // Creates a title for the section.
     public string playerName = "myString";
-    [TextArea(minLines: 3, maxLines: 6)]                 // Convenient for when you need to input more text then what the inspector can handle.
+    [TextArea(minLines: 3, maxLines: 6)]                 // Convenient for when you wish to set a spessific number of max lines
     public string playerDescription = "myDescription";
-    [Multiline]                                         // Pretty much the same as the TextArea, however it changes the text box to be on the right side of the variable instead.
+    [Multiline]                                         // Pretty much the same as the TextArea, however it allows us to overflow the text area as we please.
     public string playerSecondDescription = "mySecondDescription";
 
     [Header("Player Stats")] // Creates a title for the section.
     [Range(-0.7f, 0.7f)]                               // Gives the option of using a slider to set the value plus limit the min & max value of the variable.
     public float blockChance = 0.0f;
-    [Range(0, 100)]                                  // This works also for int's however we cannot have float values aka decimals :)
+    [Range(0, 100)]                                    // This works also for int values :)
     public int level = 0;
 
     [Header("Enemy Detection")]                         // Creates a title for the section.
