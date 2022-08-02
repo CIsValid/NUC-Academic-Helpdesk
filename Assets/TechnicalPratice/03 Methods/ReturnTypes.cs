@@ -21,7 +21,7 @@ public class ReturnTypes : MonoBehaviour
     [Space(15)]
     [SerializeField]
 
-    /* I also keep variables private, the reason why I do this is in the even I were to create a child script from this there will be less confusion as they wont show up */
+    /* I also keep variables private, the reason why I do this is in the event I were to create a child script from this there will be less confusion as they wont show up */
     /* But as you can see i still want the values to show in the editor. Thats where [SeralizeField] comes in. More on this topic much later but do know it exists */
     
     private string playerName = "CoolGuy47";
